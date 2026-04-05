@@ -1,0 +1,39 @@
+--------Langchain Demo----------
+
+1.First step is to download Ollama, https://ollama.com/download/   you can download it from this site.
+Once the respective executable is run. type in powershell or cmd the following command to the start the ollama server which will automatically latch onto the a port of the localhost
+"ollama serve"
+
+2. Download the Local Brain (Llama 3.1)
+ollama pull llama3.1
+you can download any other model you like, just check which model repos are hosted on ollama's website
+ollama list 
+to confirm that the model is downloaded, you can also check that the blobs and manifests are downloaded in the respective folders
+
+3. Run the installed model
+ollama run llama3.1
+
+4. Set Permissions (Run once to allow script execution) (not super necessary)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+5. Create Project and Virtual Environment
+mkdir langchain-news-demo; cd langchain-news-demo
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+6. Install 2026 Modular Library Stack
+python -m pip install --upgrade pip
+pip install -U langchain-ollama langchain-core langchain-community ddgs langchainhub
+
+7. Download the Local Brain (Llama 3.1)
+ollama pull llama3.1
+
+8.Run the script!
+python demo.py
+
+---------Langflow Demo----------
+You can directly ddownload the langflow executable from their website, but by doing this your installation will run in a different scope than the one in which you have ollama running, meaning your models wont be visible to langflow
+so I would suggest to do 
+pip install langflow 
+in cmd or powershell if you want to use your local llms
+I have attached the demo.json you can just load it and run with either apis for a hosted llm from grok for example or you can replace it with ollama models.

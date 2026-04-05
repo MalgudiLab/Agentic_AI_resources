@@ -36,4 +36,5 @@ You can directly ddownload the langflow executable from their website, but by do
 so I would suggest to do 
 pip install langflow 
 in cmd or powershell if you want to use your local llms
-I have attached the demo.json you can just load it and run with either apis for a hosted llm from grok for example or you can replace it with ollama models.
+I have attached the MT_langflow_demo.json you can just load it and run with either apis for a hosted llm from grok for example or you can replace it with ollama models.
+Also a heads up, my demonstration involves using astraDB for the vecor database and Grok for inference, the docs I used for refrence/context were uploaded directly through astraDB's management console, but file upload functionality can be built into langflow itself, something for you guys to explore (I have already added the needed elements in the json to do the same)
